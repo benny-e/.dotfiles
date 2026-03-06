@@ -1,38 +1,37 @@
-# ~/.config/starship.toml
+# ~/.config/starship/starship.toml
 
 add_newline = false
 palette = "cyber"
 
 format = """
+[  ](fg:arch bg:seg1)[](fg:seg1 bg:seg2)\
 $username\
-$time\
 $directory\
-$git_branch\
 $git_status\
+$git_branch\
+$fill\
+[](fg:seg1)\
+[  $time ](fg:#FFD75F bg:seg1)\
 $line_break\
 $character
 """
 
-#currently disabled
-[os]
-disabled = false
-format = "[ $symbol ](bold fg:arch bg:seg1)[](fg:seg1 bg:seg2)"
-[os.symbols]
-Arch = "  "
+[fill]
+symbol = " "
 
 [username]
 show_always = true
 format = "[ $user ](fg:green bg:seg2)[](fg:seg2 bg:seg3)"
 
-[time]
-disabled = false
-time_format = "%H:%M"
-format = "[ $time ](fg:text bg:seg3)[](fg:seg3 bg:seg4)"
-
 [directory]
 truncation_length = 2
 truncation_symbol = "…/"
-format = "[ $path ](fg:blue bg:seg4)[](fg:seg4 bg:none)"
+format = "[ $path ](fg:blue bg:seg3)[](fg:seg3)"
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = "$time"
 
 [character]
 success_symbol = "[❯](bold fg:arch)"
@@ -44,7 +43,6 @@ format = " [on ](fg:#e6e6e6)[$symbol$branch](fg:#7aa2f7)"
 
 [git_status]
 format = " [$all_status$ahead_behind](fg:#ff9f1c)"
-
 
 [palettes.cyber]
 seg1 = "#2a2f3a"
@@ -58,4 +56,3 @@ blue = "#5FAFFF"
 arch = "#1793d1"
 red  = "#ff4628"
 green = "#39FF14"
-
