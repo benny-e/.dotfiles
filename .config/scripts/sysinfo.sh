@@ -14,7 +14,13 @@ mem_total="$(awk '/MemTotal/ {print int($2/1024)}' /proc/meminfo)"
 mem_avail="$(awk '/MemAvailable/ {print int($2/1024)}' /proc/meminfo)"
 mem_used="$(( mem_total - mem_avail ))"
 
-ip_addr="$(ip -4 route get 1.1.1.1 2>/dev/null | awk '/src/ {for(i=1;i<=NF;i++) if($i=="src"){print $(i+1); exit}}')"
+ip_addr="$(
+  ip -4 route show default 2>/dev/null | awk '{print $5; exit}'
+)"
+if [[ -n "${ip_addr:-}" ]]; then
+  ip_addr="$(ip -4 addr show dev "$ip_addr" scope global 2>/dev/null \
+    | awk '/inet /{print $2}' | cut -d/ -f1 | head -n1)"
+fi
 ip_addr="${ip_addr:-N/A}"
 
 shell_name="$(basename "$SHELL")"
