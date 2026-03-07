@@ -1,58 +1,118 @@
-# ~/.config/starship/starship.toml
+"$schema" = "https://starship.rs/config-schema.json"
 
 add_newline = false
 palette = "cyber"
 
 format = """
-[  ](fg:arch bg:seg1)[](fg:seg1 bg:seg2)\
-$username\
+[ $username ](fg:green bg:color_teal)\
+[](fg:color_teal bg:color_brightgreen)\
 $directory\
-$git_status\
+[](fg:color_brightgreen bg:color_yellow)\
+$rust\
+$python\
+[](fg:color_yellow bg:color_brightorange)\
 $git_branch\
+$git_commit\
+$git_state\
+$git_status\
+[](fg:color_brightorange bg:color_blue)\
+[](fg:color_blue)\
+$cmd_duration\
 $fill\
-[](fg:seg1)\
-[  $time ](fg:#FFD75F bg:seg1)\
+[](fg:color_teal)\
+[$time ](fg:#FFD75F bg:color_teal)\
 $line_break\
-$character
-"""
+$character"""
+
+[palettes.cyber]
+color_teal = "#2a2f3a"
+color_brightgreen = "#303746"
+color_yellow = "#3a4356"
+color_brightorange = "#26324a"
+color_blue = "#1f2633"
+
+color_fg0 = "#e6e6e6"
+color_bg1 = "#121212"
+color_green = "#39FF14"
+color_red = "#ff4628"
+color_orange = "#ff9f1c"
+color_brightyellow = "#FFD75F"
+color_brightblack = "#7f8ea3"
+color_arch = "#1793d1"
+color_cyan = "#00d2ff"
+color_brightblue = "#5FAFFF"
 
 [fill]
 symbol = " "
 
 [username]
 show_always = true
-format = "[ $user ](fg:green bg:seg2)[](fg:seg2 bg:seg3)"
+style_user = "fg:color_green bg:color_teal"
+style_root = "fg:color_red bg:color_teal"
+format = "$user"
+disabled = false
 
 [directory]
+style = "fg:color_brightblue bg:color_brightgreen"
+read_only_style = "bg:color_brightgreen fg:color_orange"
+read_only = "󰌾 "
+format = "[ $path ]($style)[$read_only]($read_only_style)"
 truncation_length = 2
 truncation_symbol = "…/"
-format = "[ $path ](fg:blue bg:seg3)[](fg:seg3)"
+
+
+[git_branch]
+disabled = false
+only_attached = true
+symbol = ""
+style = "bg:color_brightorange fg:color_fg0"
+format = '[ $symbol $branch ]($style)'
+
+[git_commit]
+disabled = false
+tag_disabled = false
+tag_symbol = " 󰓼 "
+style = "bg:color_brightorange fg:color_fg0"
+format = '[ $hash$tag ]($style)'
+
+[git_state]
+disabled = false
+style = "bold bg:color_brightorange fg:color_brightyellow"
+format = '[ $state $progress_current/$progress_total ]($style)'
+
+[git_status]
+disabled = false
+style = "bold bg:color_brightorange fg:color_orange"
+format = '[ $all_status$ahead_behind ]($style)'
+
+[rust]
+disabled = false
+symbol = ""
+style = "bg:color_yellow fg:color_fg0"
+format = '[ $symbol ]($style)'
 
 [time]
 disabled = false
 time_format = "%H:%M"
-format = "$time"
+style = "fg:#FFD75F bg:color_teal"
+format = "[  $time]($style)"
+
+[python]
+disabled = false
+symbol = ""
+style = "bg:color_yellow fg:color_brightyellow"
+format = '[ $symbol $virtualenv ]($style)'
+
+[cmd_duration]
+disabled = false
+style = "fg:color_brightblack"
+min_time = 5000
+format = '[  $duration ]($style)'
+
+[line_break]
+disabled = false
 
 [character]
-success_symbol = "[❯](bold fg:arch)"
-error_symbol   = "[❯](bold fg:red)"
-
-[git_branch]
-symbol = " "
-format = " [on ](fg:#e6e6e6)[$symbol$branch](fg:#7aa2f7)"
-
-[git_status]
-format = " [$all_status$ahead_behind](fg:#ff9f1c)"
-
-[palettes.cyber]
-seg1 = "#2a2f3a"
-seg2 = "#303746"
-seg3 = "#3a4356"
-seg4 = "#26324a"
-
-text = "#e6e6e6"
-cyan = "#00d2ff"
-blue = "#5FAFFF"
-arch = "#1793d1"
-red  = "#ff4628"
-green = "#39FF14"
+disabled = false
+success_symbol = "[❯](bold fg:color_green)"
+error_symbol   = "[❯](bold fg:color_red)"
