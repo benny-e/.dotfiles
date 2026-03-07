@@ -41,7 +41,6 @@ color_brightblack = "#7f8ea3"
 color_arch = "#1793d1"
 color_cyan = "#00d2ff"
 color_brightblue = "#5FAFFF"
-color_git = "#00D2FF"
 
 [fill]
 symbol = " "
@@ -66,14 +65,14 @@ truncation_symbol = "…/"
 disabled = false
 only_attached = true
 symbol = ""
-style = "bg:color_navy fg:color_git"
+style = "bg:color_navy fg:color_orange"
 format = '[ $symbol $branch ]($style)'
 
 [git_commit]
 disabled = false
 tag_disabled = false
 tag_symbol = " 󰓼 "
-style = "bg:color_navy fg:color_git"
+style = "bg:color_navy fg:color_orange"
 format = '[ $hash$tag ]($style)'
 
 [git_state]
