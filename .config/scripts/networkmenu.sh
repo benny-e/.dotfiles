@@ -49,10 +49,8 @@ fi
 
 HEADER=$'<b>'"${CURRENT_SSID}"$'</b>\n<span size="smaller" alpha="70%">'"${IP_ADDR}"$'</span>'
 
-nmcli -p dev wifi rescan ifname "$WIFI_DEV" >/dev/null 2>&1 || true
-
 mapfile -t LINES < <(
-  nmcli -t -f SSID,SECURITY,SIGNAL dev wifi list ifname "$WIFI_DEV" \
+  nmcli -t -f SSID,SECURITY,SIGNAL dev wifi list --rescan auto ifname "$WIFI_DEV" \
   | awk -F: 'NF>=3 && $1!="" {print $1 "\t" $2 "\t" $3}' \
   | awk '!seen[$1]++' \
   | sort -t$'\t' -k3,3nr
