@@ -22,7 +22,7 @@ if [[ "$VOL" -gt "$MAX" ]]; then
   VOL="$MAX"
 fi
 
-ICON=""  
+ICON="󰕾"  
 if [[ "$MUTE" == "yes" ]]; then
   ICON="󰝟"
   VOL_DISPLAY=0
