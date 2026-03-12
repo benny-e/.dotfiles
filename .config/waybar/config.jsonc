@@ -29,8 +29,8 @@
 	"modules-left": [
 		"custom/arch",
 		"hyprland/workspaces",
-		"custom/nowplaying",
 		"custom/kernel",
+		"custom/nowplaying",
 		"custom/nvim",
 		"custom/browser",
 		"custom/fileman",
