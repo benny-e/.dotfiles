@@ -10,11 +10,12 @@
 		"~/.config/waybar/modules/custom/nvim.jsonc",
 		"~/.config/waybar/modules/custom/nowplaying.jsonc",
 		"~/.config/waybar/modules/custom/updates.jsonc",
+		"~/.config/waybar/modules/custom/launcher.jsonc",
 		"~/.config/waybar/modules/custom/spacers.jsonc",
-		"~/.config/waybar/modules/custom/kernel.jsonc",
+		"~/.config/waybar/modules/custom/system.jsonc",
 		"~/.config/waybar/modules/bluetooth.jsonc",
 		"~/.config/waybar/modules/custom/vpn.jsonc",
-		"~/.config/waybar/modules/audio.jsonc",
+		"~/.config/waybar/modules/pulseaudio.jsonc",
 		"~/.config/waybar/modules/backlight.jsonc",
 		"~/.config/waybar/modules/battery.jsonc",
 		"~/.config/waybar/modules/clock.jsonc",
@@ -27,15 +28,14 @@
 	],
 	"position": "top",
 	"modules-left": [
-		"custom/arch",
+		"custom/system",
 		"hyprland/workspaces",
-		"custom/kernel",
-		"custom/nowplaying",
 		"custom/nvim",
 		"custom/browser",
 		"custom/fileman",
 		"custom/terminal",
-		"custom/virtmanager"
+		"custom/virtmanager",
+		"custom/nowplaying"
 	],
 	"modules-center": [
 		"hyprland/window"
