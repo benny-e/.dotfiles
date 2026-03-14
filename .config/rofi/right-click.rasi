@@ -1,0 +1,102 @@
+configuration {
+  show-icons: false;
+  sidebar-mode: false;
+}
+
+* {
+  font: "JetBrainsMono Nerd Font 12";
+
+  bg:       #0f1115;
+  bg-alt:   #151922;
+  panel:    #12161e;
+  text:     #e7e7e7;
+  text-dim: #b7bcc6;
+  accent:   #1793d1;
+  border:   #2a3140;
+
+  urgent:   #d16969;
+  selected: #1a2030;
+
+  background-color: transparent;
+  text-color: @text;
+}
+
+window {
+  location: northwest;
+  anchor: northwest;
+
+  width: 320px;
+
+  background-color: @panel;
+  border: 2px;
+  border-color: @accent;
+  border-radius: 2px;
+}
+
+mainbox {
+  spacing: 6px;
+  padding: 8px;
+  background-color: transparent;
+}
+
+inputbar {
+  enabled: false;
+}
+
+message {
+  enabled: false;
+}
+
+listview {
+  columns: 1;
+  lines: 7;
+  fixed-height: false;
+  cycle: false;
+  dynamic: true;
+  scrollbar: false;
+  spacing: 4px;
+  background-color: transparent;
+}
+
+element {
+  padding: 8px 10px;
+  background-color: transparent;
+  text-color: @text;
+  border: 1px;
+  border-color: transparent;
+  border-radius: 2px;
+}
+
+element normal.normal {
+  background-color: transparent;
+  text-color: @text;
+}
+
+element normal.urgent {
+  background-color: transparent;
+  text-color: @urgent;
+}
+
+element selected.normal {
+  background-color: @selected;
+  text-color: #ffffff;
+  border: 1px;
+  border-color: @accent;
+}
+
+element selected.urgent {
+  background-color: @selected;
+  text-color: #ffffff;
+  border: 1px;
+  border-color: @urgent;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+scrollbar {
+  enabled: false;
+}

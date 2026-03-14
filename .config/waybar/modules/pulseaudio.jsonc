@@ -5,8 +5,8 @@
 		"format-source": "{volume}% ",
 		"format-source-muted": "MUTE",
 		"format-icons": {
-			"headset": "",
-			"headphone": "",
+			"headset": "󰋋",
+			"headphone": "󰋋",
 			"default": [
 				"󰕿",
 				"󰖀",

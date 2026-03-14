@@ -4,7 +4,7 @@
 		"format-ethernet": "<span rise ='2000'> </span>",
 		"format-linked": "{ifname} (No IP)  ",
 		"format-disconnected": "<span rise ='1300' size='12000'>󰤮 </span>",
-		"on-click": "~/.config/scripts/networkmenu.sh",
+		"on-click": "~/.config/waybar/scripts/networkmenu.sh",
 		"format-icons": [
 			"󰤯",
 			"󰤟",
