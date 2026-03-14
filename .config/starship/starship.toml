@@ -10,6 +10,8 @@ $directory\
 [](fg:color_slate bg:color_bluegray)\
 $rust\
 $python\
+$c\
+$cpp\
 [](fg:color_bluegray bg:color_navy)\
 $git_branch\
 $git_commit\
@@ -97,6 +99,16 @@ disabled = false
 time_format = "%H:%M"
 style = "fg:#FFD75F bg:color_slateblue"
 format = "[  $time]($style)"
+
+[c]
+symbol = ""
+style = "bg:color_bluegray fg:color_brightyellow"
+format = '[ $symbol ]($style)'
+
+[cpp]
+symbol = ""
+style = "bg:color_bluegray fg:color_brightyellow"
+format = '[ $symbol ]($style)'
 
 [python]
 disabled = false
