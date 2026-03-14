@@ -1,76 +1,66 @@
-/* Temperature */
+#temperature,
+#memory,
+#cpu,
+#pulseaudio,
+#network,
+#backlight,
+#disk,
+#battery,
+#bluetooth {
+	border-bottom: 2px solid currentColor;
+}
+
 #temperature {
 	color: @temp_cool;
-	border-bottom: 2px solid @temp_cool;
+}
+
+#memory,
+#cpu {
+	color: @cpu_fg;
 }
 
 #temperature.warning,
 #memory.warning,
 #cpu.warning {
 	color: @warn_fg;
-	border-bottom: 2px solid @warn_fg;
 }
 
 #temperature.critical,
 #memory.critical,
 #cpu.critical {
 	color: @crit_fg;
-	border-bottom: 2px solid @crit_fg;
 }
 
-/* Memory */
-#memory {
-	color: @cpu_fg;
-	border-bottom: 2px solid @cpu_fg;
-}
-
-/* CPU */
-#cpu {
-	color: @cpu_fg;
-	border-bottom: 2px solid @cpu_fg;
-}
-
-/* Pulseaudio */
 #pulseaudio {
 	color: @vol_fg;
-	border-bottom: 2px solid @vol_fg;
 	padding-right: 5px;
 }
 
 #pulseaudio.muted {
 	color: @vol_fg_muted;
 	padding-right: 5px;
-	border-bottom: 2px solid currentColor;
 }
 
-/* Network */
 #network {
 	color: @net_fg;
-	border-bottom: 2px solid @net_fg;
 }
 
 #network.disconnected {
 	color: @crit_fg;
-	border-bottom: 2px solid @crit_fg;
 }
 
-/* Backlight */
 #backlight {
 	color: @backlight_fg;
-	border-bottom: 2px solid @backlight_fg;
 	padding-right: 6px;
 }
 
-/* Disk */
 #disk {
 	color: @disk_fg;
-	border-bottom: 2px solid @disk_fg;
 }
 
-/* Tray */
 #tray {
 	padding-left: 12px;
-	padding-right: 0px;
+	padding-right: 0;
 }
 
 #tray>.passive {
@@ -82,24 +72,19 @@
 	background-color: #eb4d4b;
 }
 
-/* Battery (base + charging/warning; critical animation in 60-animations.css) */
 #battery {
 	color: @bat_good;
-	border-bottom: 2px solid @bat_good;
 }
 
 #battery.charging.warning,
 #battery.plugged.warning {
 	color: @bat_good;
-	border-bottom: 2px solid @bat_good;
 }
 
 #battery.warning {
 	color: @bat_norm;
-	border-bottom: 2px solid @bat_norm;
 }
 
-/* Clock */
 #clock {
 	background-color: transparent;
 	font-size: 18px;
@@ -112,29 +97,22 @@
 #bluetooth {
 	font-size: 17px;
 	padding: 0 2px;
-	margin: 0;
 	padding-top: 5px;
-	padding-left: 0px;
-
+	padding-left: 0;
+	margin: 0;
 	color: @bt_on;
-	border-bottom: 2px solid @bt_on;
 }
 
-/* Connected overrides */
 #bluetooth.connected {
 	color: @bt_connected;
-	border-bottom: 2px solid @bt_connected;
 }
 
-/* Powered off overrides */
 #bluetooth.disabled {
 	color: @bt_off;
-	border-bottom: 2px solid @bt_off;
 }
 
-
 #idle_inhibitor {
-	padding-top: 0px;
+	padding-top: 0;
 	color: rgba(255, 255, 255, 0.55);
 }
 
@@ -143,9 +121,9 @@
 }
 
 #bluetooth:hover,
-#audio:hover,
+#pulseaudio:hover,
 #network:hover,
 #idle_inhibitor:hover {
-	border-radius: 0px;
+	border-radius: 0;
 	text-shadow: 0 0 9px rgba(0, 0, 0, 0.9);
 }
