@@ -1,7 +1,7 @@
 {
 	"custom/launcher": {
-		"format": "",
+		"format": "󱓞",
 		"tooltip": false,
-		"on-click": "~/.config/scripts/left-side-plaunch.sh"
+		"on-click": "rofi -show drun -theme ~/.config/rofi/launcher.rasi -hover-select"
 	}
 }
