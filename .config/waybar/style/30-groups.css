@@ -31,6 +31,7 @@
 #custom-terminal,
 #custom-discord,
 #custom-nvim,
+#custom-launcher,
 #custom-virtmanager {
 	margin: 0;
 	padding: 4px 9px;
@@ -44,6 +45,7 @@
 #custom-terminal:hover,
 #custom-discord:hover,
 #custom-nvim:hover,
+#custom-launcher:hover,
 #custom-virtmanager:hover {
 	border-radius: 0;
 	text-shadow: 0 0 9px rgba(0, 0, 0, 0.7);
