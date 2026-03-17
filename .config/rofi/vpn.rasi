@@ -35,10 +35,10 @@ mainbox {
 }
 
 listview {
-  lines: 4;
+  lines: 3;
   spacing: 10px;
   scrollbar: false;
-  fixed-height: false;
+  fixed-height: true;
 }
 
 element {

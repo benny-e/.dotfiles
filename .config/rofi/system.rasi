@@ -9,7 +9,7 @@ configuration {
 
   bg:           #0f1115;
   bg-alt:       #151922;
-  panel:        rgba(24, 24, 27, 0.95);
+  panel:        rgba(21, 25, 33, 0.95);
   tile:         #0f1115;
   text:         #e7e7e7;
   text-dim:     #b7bcc6;
@@ -86,7 +86,7 @@ listview {
   columns: 1;
   lines: 4;
   spacing: @spacing;
-  fixed-height: false;
+  fixed-height: true;
   scrollbar: false;
   background-color: transparent;
   expand: true;
@@ -97,7 +97,7 @@ element {
   text-color: @text;
 
   border: 2px;
-  border-color: @border;
+  border-color: transparent;
   border-radius: 1px;
   width: 48px;
   padding: 17px 0px;

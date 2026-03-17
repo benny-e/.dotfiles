@@ -1,39 +1,36 @@
-
-
 configuration {
   show-icons: false;
   sidebar-mode: false;
+  hover-select: true;
 }
 
 * {
   font: "JetBrainsMono Nerd Font 12";
-  text-color: #FFFFFF;
 
-  bg:       #0f1115;
-  bg-alt:   #151922;
-  panel:    #12161e;
-  text:     #e7e7e7;
-  text-dim: #b7bcc6;
+  bg:      #12100e;
+  bg-alt:  #1a1612;
+  panel:   rgba(22, 18, 14, 0.96);
 
-  accent:   #1793d1; 
-  border:   #2a3140;
+  text:    #f2ede6;
+  muted:   #c8bfb3;
 
+  wood:    #7a5c3e;
+  brass:   #caa46b;
 
+  border:  #3a2f24;
+  select:  #2a2119;
 }
 
 window {
-  location: north;
-  anchor: north;
-
-  x-offset: 0px;
-  y-offset: 0px;
+  location: center;
+  anchor: center;
 
   width: 600px;
 
-  background-color: rgba(24, 24, 24, 0.96);
+  background-color: @panel;
 
   border: 2px;
-  border-color: @accent;
+  border-color: @wood;
   border-radius: 2px;
 }
 
@@ -41,73 +38,69 @@ mainbox {
   padding: 10px;
   spacing: 8px;
   background-color: transparent;
-  border-radius: 2px;
 }
 
 inputbar {
   children: [ prompt, entry ];
+
   padding: 6px;
+
   background-color: @bg-alt;
-  border-radius: 2px;
+
+  border-color: transparent;
 }
 
 prompt {
-  enabled: true;
-  text-color: @text-dim;
   background-color: transparent;
+  text-color: @muted;
 }
 
 entry {
   background-color: transparent;
-  text-color: #FFFFFF;
-  placeholder: "Search…";
-  placeholder-color: rgba(255, 255, 255, 0.65);
-}
+  text-color: @text;
 
-message {
-  padding: 8px;
-  background-color: rgba(28, 20, 14, 0.92);
-  text-color: rgba(255, 255, 255, 0.75);
-  border-radius: 2px;
+  placeholder: "Search clipboard…";
+  placeholder-color: rgba(242,237,230,0.45);
 }
 
 listview {
-  lines: 12;
+  lines: 15;
   fixed-height: true;
   spacing: 6px;
   scrollbar: false;
 
   background-color: transparent;
-  border-radius: 2px;
+  
+  dynamic: false;
 }
 
 element {
-  padding: 8px;
+  padding: 8px 10px;
+
   background-color: transparent;
+  text-color: @text;
+
+  border: 1px;
+  border-color: transparent;
   border-radius: 2px;
 }
 
 element-text {
   background-color: transparent;
-  text-color: inherit;
+  text-color: @text;
+  vertical-align: 0.5;
+  width: 80ch;
 }
 
 element selected {
-  background-color: #1a2030;
-  border-radius: 2px;
-  border: 2px;
-  border-color: @accent;
+  background-color: @select;
+
+  border: 1px;
+  border-color: @brass;
 }
 
-scrollbar {
-  width: 6px;
+message {
+  padding: 8px;
   background-color: transparent;
-  border-radius: 2px;
+  text-color: @muted;
 }
-
-scrollbar handle {
-  background-color: rgba(255, 122, 0, 0.55);
-  border-radius: 2px;
-}
-
-
