@@ -7,7 +7,7 @@
 #disk,
 #battery,
 #bluetooth {
-	border-bottom: 2px solid currentColor;
+	border-bottom: 1px solid currentColor;
 }
 
 #temperature {
@@ -59,9 +59,11 @@
 }
 
 #tray {
-	padding-left: 12px;
-	padding-right: 0;
+	padding-left: 10px;
+	padding-right: 8px;
+	border-radius: 2px;
 }
+
 
 #tray>.passive {
 	-gtk-icon-effect: dim;
@@ -97,7 +99,6 @@
 #bluetooth {
 	font-size: 17px;
 	padding: 0 2px;
-	padding-top: 5px;
 	padding-left: 0;
 	margin: 0;
 	color: @bt_on;
@@ -112,8 +113,10 @@
 }
 
 #idle_inhibitor {
-	padding-top: 0;
+	padding-left: 8px;
+	padding-top: 3px;
 	color: rgba(255, 255, 255, 0.55);
+	font-size: 14px;
 }
 
 #idle_inhibitor.activated {

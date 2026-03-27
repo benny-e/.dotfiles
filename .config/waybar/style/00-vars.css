@@ -4,10 +4,10 @@
 @define-color bg_alt #151720;
 @define-color warn_fg #FF9F00;
 @define-color crit_fg #FF2A1A;
-@define-color window_main rgba(33, 38, 49, 0.3);
+@define-color window_main rgb(24, 24, 24);
 @define-color tooltips_bg rgba(24, 24, 24, 0.92);
 @define-color workspaces_bg rgba(45, 45, 45, 0.3);
-@define-color trayc rgba(45, 45, 45, 0.3);
+@define-color trayc rgb(24, 24, 24);
 /* Wi-Fi / Network */
 @define-color net_fg #00e5ff;
 

@@ -21,9 +21,9 @@
 #custom-launcher,
 #custom-nowplaying {
 	margin: 0;
-	padding-top: 4px;
 	border-radius: 0;
 	background-color: @trayc;
+	border-bottom: 2px solid #1a1d21;
 }
 
 #custom-browser,
@@ -35,9 +35,10 @@
 #custom-virtmanager {
 	margin: 0;
 	padding: 4px 9px;
-	font-size: 18px;
+	font-size: 16px;
 	border-radius: 0;
 	background-color: @trayc;
+	border-bottom: 2px solid #1a1d21;
 }
 
 #custom-browser:hover,

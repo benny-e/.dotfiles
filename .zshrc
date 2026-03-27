@@ -14,5 +14,5 @@ bindkey '^[[Z' expand-or-complete    # Shift+Tab → normal completion
 
 # Aliases
 alias vim="nvim"
-alias ls="ls --color=auto"
-
+# alias ls="ls --color=auto"
+alias ls="lsd"

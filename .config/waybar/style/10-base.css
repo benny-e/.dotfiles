@@ -25,7 +25,7 @@ tooltip label {
 window#waybar {
 	background-color: @window_main;
 	border-radius: 0px;
-	border-bottom: 0px solid rgba(100, 114, 125, 0.5);
+	border-bottom: 2px solid #1a1d21;
 	color: #ffffff;
 	transition-property: background-color;
 	transition-duration: .5s;
@@ -36,7 +36,7 @@ window#waybar.hidden {
 }
 
 window#waybar.empty {
-	background-color: transparent;
+	background-color: @window_main;
 }
 
 window#waybar.solo {

@@ -17,20 +17,17 @@ else
     flatpak_updates=0
 fi
 
-# Total for severity (pacman + aur only)
 total=$((repo + aur))
 
-if [ "$total" -lt 30 ]; then
+if [ "$total" -lt 45 ]; then
     echo ""
     exit
 fi
 
-class="low"
+class="medium"
 
-if [ "$total" -ge 150 ]; then
+if [ "$total" -ge 120 ]; then
     class="high"
-elif [ "$total" -ge 80 ]; then
-    class="medium"
 fi
 
 echo "{\"text\":\"󰚰\",\"tooltip\":\"Pacman: $repo\nAUR: $aur\nFlatpak: $flatpak_updates\",\"class\":\"$class\"}"
