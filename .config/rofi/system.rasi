@@ -52,7 +52,7 @@ powerside {
   expand: false;
   width: 64px;
 
-  background-color: @panel;
+  background-color: transparent;
   border: 2px;
   border-color: transparent;
   border-radius: 0px;
