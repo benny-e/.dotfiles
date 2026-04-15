@@ -1,7 +1,7 @@
 {
 	"custom/browser": {
 		"format": "",
-		"on-click": "brave",
+		"on-click": "firefox",
 		"tooltip": false,
 		"icon-size": 32
 	}
