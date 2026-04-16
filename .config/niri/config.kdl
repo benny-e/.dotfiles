@@ -5,7 +5,7 @@
 spawn-at-startup "waybar" 
 spawn-at-startup "mako"
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
-spawn-at-startup "swayidle" "-w"
+spawn-at-startup "~/.config/niri/scripts/idle.sh" 
 // INPUT DEVICES
 
 input {
@@ -45,8 +45,7 @@ output "eDP-1" {
 layout {
     gaps 10
 
-    center-focused-column "on-overflow"
-    always-center-single-column
+    center-focused-column "never"
 
     background-color "transparent"
 
@@ -110,7 +109,6 @@ workspace "8"
 workspace "9"
 // VISUAL PREFERENCES
 
-prefer-no-csd
 
 hotkey-overlay {
     hide-not-bound
@@ -192,7 +190,16 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"^(pavucontrol|gnome-calculator|org\.gnome\.Calculator)$"#
+    match app-id=r#"^(pavucontrol|org\.pulseaudio\.pavucontrol)$"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"^blueman-manager$"#
+    open-floating true
+}
+window-rule {
+    match app-id=r#"^thunar$"#
     open-floating true
 }
 
@@ -220,6 +227,7 @@ binds {
     Mod+Return { spawn "kitty"; }
     Mod+R { spawn-sh "rofi -show drun -theme ~/.config/rofi/launcher.rasi"; }
     Mod+B {spawn "firefox";}
+    Mod+E { spawn "thunar";}
 
     // OVERVIEW
 
@@ -312,7 +320,7 @@ binds {
 
     // SYSTEM CONTROLS
 
-    Mod+Alt+L {spawn "hyprlock" ; }
+    Mod+Alt+L {spawn "swaylock" ; }
 
     Mod+Shift+E { quit; }
 }

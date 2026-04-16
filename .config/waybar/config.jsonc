@@ -38,7 +38,7 @@
 		"custom/nowplaying"
 	],
 	"modules-center": [
-		"hyprland/window"
+		"clock"
 	],
 	"modules-right": [
 		"tray",
@@ -60,6 +60,6 @@
 		"temperature",
 		"custom/spacer",
 		"battery",
-		"clock"
+		"custom/spacer"
 	]
 }

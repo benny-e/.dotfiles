@@ -1,0 +1,18 @@
+color=121212
+
+indicator-idle-visible
+indicator-radius=60
+indicator-thickness=6
+
+ring-color=2a2a2a
+inside-color=121212
+inside-clear-color=121212
+text-color=c0c0c0
+
+key-hl-color=00ff6a
+bs-hl-color=ff4d6d
+
+separator-color=00000000
+line-color=00000000
+
+font=JetBrainsMono Nerd Font
