@@ -4,9 +4,9 @@
     "interval": 2,
     "warning-threshold": 80,
     "critical-threshold": 95, 
-    "format": "<span rise = '2000'>{icon} </span>{temperatureC}",
-    "format-warning": "<span rise = '2000'>{icon}</span> {temperatureC}",
-    "format-critical": "<span rise = '2000'>{icon}</span> {temperatureC}",
+    "format": "{icon} {temperatureC}",
+    "format-warning": "{icon} {temperatureC}",
+    "format-critical": "{icon} {temperatureC}",
     "format-icons": "",
     "tooltip": false
   }

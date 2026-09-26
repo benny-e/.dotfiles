@@ -1,6 +1,6 @@
 {
 	"custom/launcher": {
-		"format": "<span size = '18000'>󱓞</span>",
+		"format": "󱓞",
 		"tooltip": false,
 		"on-click": "rofi -show drun -theme ~/.config/rofi/launcher.rasi -hover-select"
 	}

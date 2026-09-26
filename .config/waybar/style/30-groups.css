@@ -1,3 +1,7 @@
+/* ICON SPACING: tune these rules first.
+ * Single-icon modules: 16px minimum content + 8px per side.
+ * Value modules: 8px per side and one literal space in their format string.
+ */
 #battery,
 #disk,
 #backlight,
@@ -12,20 +16,10 @@
 #bluetooth,
 #custom-vpn,
 #custom-logout,
-#custom-spacer,
-#custom-rightend,
 #custom-updates,
-#custom-leftend,
 #custom-system,
 #custom-arch,
-#custom-launcher,
-#custom-nowplaying {
-	margin: 0;
-	border-radius: 0;
-	background-color: @trayc;
-	border-bottom: 2px solid #1a1d21;
-}
-
+#custom-nowplaying,
 #custom-browser,
 #custom-fileman,
 #custom-terminal,
@@ -34,11 +28,32 @@
 #custom-launcher,
 #custom-virtmanager {
 	margin: 0;
-	padding: 4px 8px;
-	font-size: 14px;
+	padding: 0 8px;
 	border-radius: 0;
 	background-color: @trayc;
 	border-bottom: 2px solid #1a1d21;
+}
+
+/* Icon-only modules share one cell with no per-module spacing overrides. */
+#backlight,
+#pulseaudio,
+#bluetooth,
+#idle_inhibitor,
+#custom-vpn,
+#custom-logout,
+#custom-system,
+#custom-arch,
+#custom-nowplaying,
+#custom-updates,
+#custom-browser,
+#custom-fileman,
+#custom-terminal,
+#custom-discord,
+#custom-nvim,
+#custom-launcher,
+#custom-virtmanager {
+	min-width: 18px;
+	font-size: 18px;
 }
 
 #custom-browser:hover,
@@ -48,6 +63,5 @@
 #custom-nvim:hover,
 #custom-launcher:hover,
 #custom-virtmanager:hover {
-	border-radius: 0;
 	text-shadow: 0 0 9px rgba(0, 0, 0, 0.7);
 }

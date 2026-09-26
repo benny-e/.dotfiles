@@ -1,7 +1,8 @@
 * {
 	border: none;
 	border-radius: 0px;
-	font-family: JetBrainsMono;
+	/* Keep digits and Nerd Font glyphs on monospaced metrics. Check with fc-match. */
+	font-family: "Symbols Nerd Font Mono", "JetBrainsMono Nerd Font Mono", "JetBrainsMono Nerd Font", "JetBrainsMono", monospace;
 	font-size: 14px;
 	font-weight: bold;
 	min-height: 0;

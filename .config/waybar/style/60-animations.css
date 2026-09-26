@@ -20,7 +20,6 @@
 #workspaces button.urgent {
 	color: #ff5555;
 	animation: workspace-urgent-pulse 2.5s infinite;
-	font-size: 22px;
 }
 
 @keyframes workspace-urgent-pulse {

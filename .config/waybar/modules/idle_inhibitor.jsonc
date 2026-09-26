@@ -3,8 +3,8 @@
 		"format": "{icon}",
 		"tooltip": false,
 		"format-icons": {
-			"activated": "<span size = '18000'>󰅶</span>",
-			"deactivated": "<span size = '18000'>󰾪</span>"
+			"activated": "󰅶",
+			"deactivated": "󰾪"
 		},
 		"tooltip-format-activated": "<b>Idle Inhibitor</b>: Activated",
 		"tooltip-format-deactivated": "<b>Idle Inhibitor</b>: Deactivated"

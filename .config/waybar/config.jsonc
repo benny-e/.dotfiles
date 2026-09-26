@@ -34,7 +34,6 @@
 		"custom/browser",
 		"custom/fileman",
 		"custom/terminal",
-		"custom/virtmanager",
 		"custom/nowplaying"
 	],
 	"modules-center": [
