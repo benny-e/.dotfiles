@@ -16,3 +16,8 @@ bindkey '^[[Z' expand-or-complete    # Shift+Tab → normal completion
 alias vim="nvim"
 # alias ls="ls --color=auto"
 alias ls="lsd"
+
+#Auto start tmux
+if [[ -z "$TMUX" && -o interactive && -t 0 && -t 1 ]]; then
+    exec tmux new-session -A -s main
+fi
